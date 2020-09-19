@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Trie from '../util/Trie';
+
 import BoggleBoard from './boggleBoard/BoggleBoard';
 import WordsFound from './WordsFound';
 
@@ -25,12 +27,11 @@ const wordsFoundContainerStyle = {
 const BoggleSolver = (props) => {
     const {
         alphabet,
-        dictionary
+        dictionaryTrie,
+        numberOfColumns,
+        numberOfRows
     } = props;
 
-    // Intent is to let user change the board size, but I didn't have time to implement it
-    const [numberOfColumns, setNumberOfColums] = React.useState(4);
-    const [numberOfRows, setNumberOfRows] = React.useState(4);
     const [boardState, setBoardState] = React.useState({});
     const [wordsFound, setWordsFound] = React.useState([]);
 
@@ -46,8 +47,7 @@ const BoggleSolver = (props) => {
         setBoardState(initialBoardState);
     }, [numberOfColumns, numberOfRows]);
 
-    const handleOnSubmit = (event) => {
-        event.preventDefault();
+    const handleOnSubmit = () => {
         console.log(boardState);
     };
 
@@ -77,7 +77,9 @@ const BoggleSolver = (props) => {
 
 BoggleSolver.propTypes = {
     alphabet: PropTypes.instanceOf(Set).isRequired,
-    dictionary: PropTypes.array
+    dictionaryTrie: PropTypes.instanceOf(Trie).isRequired,
+    numberOfColumns: PropTypes.number.isRequired,
+    numberOfRows: PropTypes.number.isRequired,
 };
 
 export default BoggleSolver;

@@ -46,6 +46,7 @@ const BoggleBoardCell = (props) => {
         setHasError(newValue.length > 0 && !alphabet.has(newValue));
     };
 
+    // Needs to be in here instead of outside the class like the others since it's using state.
     const inputProps = {
         style: {
             color: hasError ? 'red' : '#000000',
