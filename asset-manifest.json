@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/boggle-solver/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/boggle-solver/static/js/main.93b38dfa.chunk.js",
+    "main.js.map": "/boggle-solver/static/js/main.93b38dfa.chunk.js.map",
+    "runtime-main.js": "/boggle-solver/static/js/runtime-main.48ca23d1.js",
+    "runtime-main.js.map": "/boggle-solver/static/js/runtime-main.48ca23d1.js.map",
+    "static/js/2.3a62a740.chunk.js": "/boggle-solver/static/js/2.3a62a740.chunk.js",
+    "static/js/2.3a62a740.chunk.js.map": "/boggle-solver/static/js/2.3a62a740.chunk.js.map",
+    "index.html": "/boggle-solver/index.html",
+    "precache-manifest.649574ff680b19611b7f1209b44f1861.js": "/boggle-solver/precache-manifest.649574ff680b19611b7f1209b44f1861.js",
+    "service-worker.js": "/boggle-solver/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/boggle-solver/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.3a62a740.chunk.js.LICENSE.txt": "/boggle-solver/static/js/2.3a62a740.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48ca23d1.js",
+    "static/js/2.3a62a740.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.93b38dfa.chunk.js"
+  ]
+}
