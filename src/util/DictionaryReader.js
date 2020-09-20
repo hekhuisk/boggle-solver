@@ -4,10 +4,10 @@ import Trie from './Trie';
  * Filters a dictionary to only have words that are within the given word length limits.
  * It also upper cases every word.
  *
- * @param {array}  dictionary        - Dictionary to filter
+ * @param {Array}  dictionary        - Dictionary to filter
  * @param {number} minimumWordLength - Minimum length of words to keep
  * @param {number} maxWordLength     - Maximum length of words to keep
- * @returns {array} the filtered dictionary
+ * @returns {[]} the filtered dictionary
  */
 const filterDictionary = (dictionary, minimumWordLength, maxWordLength) =>
     dictionary.reduce((filteredDictionary, word) => {
@@ -22,7 +22,7 @@ const filterDictionary = (dictionary, minimumWordLength, maxWordLength) =>
  * length limits, upper cases the remaining words, and then creates a Trie from the
  * filtered dictionary.
  *
- * @param {array}  dictionary        - Dictionary to filter
+ * @param {Array}  dictionary        - Dictionary to filter
  * @param {number} minimumWordLength - Minimum length of words to keep
  * @param {number} maxWordLength     - Maximum length of words to keep
  * @returns {Trie}

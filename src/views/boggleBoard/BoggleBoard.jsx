@@ -30,7 +30,7 @@ const BoggleBoard = (props) => {
     const {
         alphabet,
         boardState,
-        handleOnSubmit,
+        handleSolve,
         numberOfColumns,
         numberOfRows,
         setBoardState
@@ -59,9 +59,9 @@ const BoggleBoard = (props) => {
             <div>
             <Button
                 color="primary"
-                variant="contained"
                 style={buttonStyle}
-                onClick={handleOnSubmit}
+                variant="contained"
+                onClick={handleSolve}
             >
                 Solve
             </Button>
@@ -73,7 +73,7 @@ const BoggleBoard = (props) => {
 BoggleBoard.propTypes = {
     alphabet: PropTypes.instanceOf(Set).isRequired,
     boardState: PropTypes.object.isRequired,
-    handleOnSubmit: PropTypes.func.isRequired,
+    handleSolve: PropTypes.func.isRequired,
     numberOfColumns: PropTypes.number.isRequired,
     numberOfRows: PropTypes.number.isRequired,
     setBoardState: PropTypes.func.isRequired

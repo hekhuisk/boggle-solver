@@ -19,8 +19,8 @@ const BoggleBoardColumn = (props) => {
             <BoggleBoardCell
                 alphabet={alphabet}
                 boardState={boardState}
-                cellName={`${i},${columnIndex}`}
-                key={`cell-${i},${columnIndex}`}
+                cellName={`(${i},${columnIndex})`}
+                key={`cell-(${i},${columnIndex})`}
                 setBoardState={setBoardState}
             />
         );

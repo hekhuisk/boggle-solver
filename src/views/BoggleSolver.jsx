@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { solveTheBoggle } from '../util/BoggleSolverUtil';
 import Trie from '../util/Trie';
 
 import BoggleBoard from './boggleBoard/BoggleBoard';
@@ -40,16 +41,15 @@ const BoggleSolver = (props) => {
 
         for (let i = 0; i < numberOfRows; i++) {
             for (let j = 0; j < numberOfColumns; j++) {
-                initialBoardState[`${i},${j}`] = '';
+                initialBoardState[`(${i},${j})`] = '';
             }
         }
 
         setBoardState(initialBoardState);
     }, [numberOfColumns, numberOfRows]);
 
-    const handleOnSubmit = () => {
-        console.log(boardState);
-    };
+    const handleSolve = () =>
+        setWordsFound(solveTheBoggle(boardState, numberOfColumns, numberOfRows, dictionaryTrie));
 
     return (
         <div>
@@ -64,7 +64,7 @@ const BoggleSolver = (props) => {
                         numberOfColumns={numberOfColumns}
                         numberOfRows={numberOfRows}
                         setBoardState={setBoardState}
-                        handleOnSubmit={handleOnSubmit}
+                        handleSolve={handleSolve}
                     />
                 </div>
                 <div style={wordsFoundContainerStyle}>

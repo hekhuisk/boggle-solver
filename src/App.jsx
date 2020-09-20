@@ -11,7 +11,7 @@ import BoggleSolver from './views/BoggleSolver';
  * -Ability for user to select number of columns and rows
  * -Ability for user to select alphabet to use
  * -Ability for user to select dictionary to use
- * -Figure out how to read in entire English dictionary instead of a small subset
+ * -Figure out how to read in entire English dictionary instead of a small subset without taking forever
  * -Host on GitHub Pages
  * -Make validation actually work
  * -Unit tests
